@@ -140,11 +140,62 @@ $~$
 
 **b)** $H(X|Y)$ e $H(Y|X)$
 
+$H(Y|X) = -\Sigma_x\Sigma_y p(x, y) log_2[p(y|x)]$
+
+$H(Y|X) = H(X, Y) - H(X)$
+
+$H(X|Y) = H(X, Y) - H(Y)$
+
+---
+
+$P(Y=1 | X=0) = \frac{P(X=0, Y=1)}{P(X)} => \frac{1}{4}\times\frac{4}{1} = 1$
+
+$P(Y=0 | X=1) = \frac{P(X=1, Y=0)}{P(X)} => \frac{3}{8}\times\frac{4}{3} = \frac{1}{2}$
+
+$P(Y=1 | X=1) = \frac{P(X=1, Y=1)}{P(X)} = \frac{1}{2}$
+
+---
+
+$H(Y|X) = -( (\frac{1}{4} log_2(1)) + (\frac{3}{8} log_2(\frac{1}{2})) + (\frac{3}{8} log_2(\frac{1}{2})) )$
+
+$H(Y|X) = -( (\frac{3}{8} \times -1) + (\frac{3}{8} \times -1) )$
+
+$H(Y|X) = -( (-\frac{3}{8}) + (-\frac{3}{8}) )$
+
+$H(Y|X) = 0.75$
+
+---
+
+$H(X|Y) = 1.5612 - 0.9544$
+
+$H(X|Y) = 0.6068$
+
+---
+
+**Resposta:**
+
+$H(Y|X) = 0.75$
+
+$H(X|Y) = 0.6068$
 
 
 $~$
 
 **c)** $I(X, Y)$
+
+Dado que,
+
+$I(X, Y) = H(X) - H(X|Y)$
+
+temos portanto,
+
+$I(X, Y) = 0.8112 - 0.6068$
+
+$I(X, Y) = 0.2044$
+
+**Resposta:**
+
+$I(X, Y) = 0.2044$
 
 
 
