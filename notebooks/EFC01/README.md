@@ -458,19 +458,19 @@ O resultados obtidos são apresentados abaixo.
 
 Os gráficos acima, apresentam os valores após filtro pós-processamento para escolher o melhor valor de K.
 
-Abaixo, é apresentado os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
+Abaixo, são apresentados os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
 
           K  K-Fold  Validation Fold  Média MSE
-    211  12       3                3   6.106218
-    306  17       3                3   6.113080
-    325  18       3                3   6.124077
-    287  16       3                3   6.124489
-    230  13       3                3   6.127886
-    192  11       3                3   6.129489
-    214  12       6                6   6.136289
-    157   9       6                6   6.136340
-    154   9       3                3   6.144639
-    213  12       5                5   6.146275
+    287  16       3                3   6.087971
+    268  15       3                3   6.115867
+    249  14       3                3   6.126024
+    157   9       6                6   6.127955
+    192  11       3                3   6.133455
+    363  20       3                3   6.135489
+    344  19       3                3   6.143807
+    290  16       6                6   6.145325
+    154   9       3                3   6.145530
+    195  11       6                6   6.147887
 
 
 É possível também, usar de outra alternativa no método de K-Fold... no caso estamos embaralhando os dados antes de passar para o método e consequentemente o modelo. Por fim, chegamos aproximadamente no mesmo resultado, entretanto tomando um caminho de certa maneira diferente... Neste sentido, podemos encontrar os melhores valores $W$ para o modelo em folds totalmente direfentes.
@@ -478,26 +478,26 @@ Abaixo, é apresentado os primeiros 10 itens da iteração total executada. O pr
     Melhores valores
     --------------------
     K     : 9
-    K-Fold: 1 / 1
+    K-Fold: 5 / 1
 
 
 
 ![png](EFC01_files/EFC01_32_1.png)
 
 
-Abaixo, é apresentado os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
+Abaixo, são apresentados os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
 
           K  K-Fold  Validation Fold  Média MSE
-    380  21       1                1   5.734276
-    152   9       1                1   5.740302
-    437  24       1                1   5.771849
-    494  27       1                1   5.832434
-    456  25       1                1   5.841967
-    399  22       1                1   5.864810
-    285  16       1                1   5.866220
-    532  29       1                1   5.866232
-    552  30       2                1   5.886848
-    384  21       5                3   5.890825
+    286  16       2                1   5.750690
+    346  19       5                3   5.826303
+    266  15       1                1   5.835400
+    343  19       2                2   5.868697
+    457  25       2                2   5.877817
+    172  10       2                2   5.879661
+    513  28       1                1   5.891007
+    381  21       2                2   5.892352
+    156   9       5                1   5.905596
+    478  26       4                2   5.909008
 
 
 #### **Exercício 2**
@@ -506,38 +506,66 @@ No exercício 2 usando o mesmo dataset usando anteriormente com a mesma questão
 
 Para validar a quantidade de unidades ( ou neurônios ) faremos a geração dessas unidades variando de 1 até 100 com seus pesos dentro de uma distribuição uniforme variando de -1 até 1.
 
-Como valores para $\lambda$ (regularização) será utilizado o seguinte range: 1e+1 até 1e-6, dando espaçamentos de 0.1.
+Como valores para $\lambda$ (regularização) será utilizado o seguinte range: 1e+1 até 1e-6, dando espaçamentos de 0.1. Para visualmente ficar mais legível (devido a grande variação), os dados (os valores de regularização) são apresentados em escala logarítimica.
 
 Para a normalização dos dados, evitando a saturação da tangente hiperbólica, os dados serão normalizados entre os valores de mínimo e máximo dos dados (os quais já foram apresentados acima).
+
+Valores de K, estão dentro da faixa de 5 até 20 e o K-Fold utilizado foi de 1 até 10 folds.
 
     Valores de regularização testados: 8
     [1.e+01 1.e+00 1.e-01 1.e-02 1.e-03 1.e-04 1.e-05 1.e-06]
 
 
+    K: 5  <=>  Time to run: 163.76 secs
+    K: 6  <=>  Time to run: 168.24 secs
+    K: 7  <=>  Time to run: 168.59 secs
+    K: 8  <=>  Time to run: 167.77 secs
+    K: 9  <=>  Time to run: 167.6 secs
+    K: 10  <=>  Time to run: 167.5 secs
+    K: 11  <=>  Time to run: 166.18 secs
+    K: 12  <=>  Time to run: 167.34 secs
+    K: 13  <=>  Time to run: 168.47 secs
+    K: 14  <=>  Time to run: 190.73 secs
+    K: 15  <=>  Time to run: 192.71 secs
+    K: 16  <=>  Time to run: 182.79 secs
+    K: 17  <=>  Time to run: 210.97 secs
+    K: 18  <=>  Time to run: 187.06 secs
+    K: 19  <=>  Time to run: 188.91 secs
+    K: 20  <=>  Time to run: 174.61 secs
+
+
     Melhores resultados:
     --------------------
-    K-Fold           :  2 / 2
+    K-Fold           :  1 / 1
     K                :  5
-    T                :  19
-    lambda           :  1e-06
-    MSE da validação :  7.038507559126776
+    T                :  100
+    lambda           :  0.0001
+    MSE da validação :  6.952768332192359
 
 
 
 ![png](EFC01_files/EFC01_40_0.png)
 
 
-Abaixo, é apresentado os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
+Abaixo, são apresentados os primeiros 10 itens da iteração total executada. O primeiro item não representa a melhor opção, pois para escolha da melhor opção foi calculada a média dos valores.
 
-           K  K-Fold  Validation Fold   T  Regularizacao  Média MSE
-    1532   9       1                0  13       0.000010   6.649511
-    1559   9       2                1  20       0.001000   6.674641
-    1579   9       3                2  20       0.001000   6.686954
-    1533   9       1                0  14       0.000010   6.707878
-    1558   9       2                1  19       0.000001   6.708406
-    1159   8       1                0  20       0.001000   6.714426
-    1939  10       2                1  20       0.000100   6.719291
-    1557   9       2                1  18       0.000100   6.724383
-    1577   9       3                2  18       0.001000   6.731869
-    1538   9       1                0  19       0.010000   6.737638
+           K  K-Fold  Validation Fold    T  Regularizacao  Média MSE
+    8483  14       3                2  101        0.00100   6.479141
+    9378  15       3                2   87        0.01000   6.488502
+    8459  14       3                2   77        0.00100   6.491464
+    8469  14       3                2   87        0.00010   6.492263
+    9374  15       3                2   83        0.00100   6.493626
+    9337  15       3                2   46        0.00100   6.495681
+    8440  14       3                2   58        0.00001   6.496261
+    8479  14       3                2   97        0.00100   6.497782
+    8468  14       3                2   86        0.00010   6.498737
+    9386  15       3                2   95        0.00100   6.500816
 
+
+O resultado do modelo acima ficou bem próximo do executado usando apenas a Regressão Linear simples (sem uma camada intermediára entre as entradas e o Regressor). Neste sentido, pela natureza dos dados, mesmo usando modelos mais complexos podemos acabar por chegar no mesmo resultado.
+
+---
+
+Rodolfo De Nadai - 208911
+
+Todo o código deste relatório esta disponível em: https://github.com/rdenadai/ia006c
