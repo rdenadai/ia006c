@@ -116,11 +116,19 @@ onde $\mu$ é a média e $\sigma$ a variância de cada coluna.
 
 Através da matriz de correlação, podemos ter uma ideia de como as features de nosso dataset estão correlacionadas entre si.
 
-Nota-se uma correlação relativamente alta entre os campos *meanfun* e o *label*. O que permite inferir que esse atributo terá forte influência na classificaçãod dos resultados.
+Destacam-se a correlação NEGATIVA forte entre os campos meanfun e o label, ou seja, quando um atributo cresce, o outro decresce.
 
 Evitando, encontrar apenas correlações lineares entres os valores, aplica-se também a Correlação em Distância, a qual possibilita visualizar valores de correlação não lineares entre variáveis e também avaliar a indepedência das variáveis (quando o valor for zero).
 
 A Correlação em Distância, também exemplifica o apresentado acima a respeito do atributo *meanfun*.
+
+Lembrando que os valores de correlação de Pearson seguem a seguinte interpretação:
+
+0.9 para mais ou para menos indica uma correlação muito forte.
+0.7 a 0.9 positivo ou negativo indica uma correlação forte.
+0.5 a 0.7 positivo ou negativo indica uma correlação moderada.
+0.3 a 0.5 positivo ou negativo indica uma correlação fraca.
+0 a 0.3 positivo ou negativo indica uma correlação desprezível.
 
 
 ![png](EFC02_files/EFC02_13_0.png)
@@ -158,6 +166,8 @@ Nos testes iniciais o único valor padrão alterado foi de learning rate, altera
 
 Conforme mencionado em aula, apesar da análise estatística apresentar uma possível seleção de atributos, no caso do classificador serão utilizados todos os dados (todos os dados escalonados).
 
+Para treinamento do modelo e avaliação de todos os itens do exercício os dados foram divididos em treinamento, validação e teste. Para treinamento / teste foi usado 80% / 20%, e posteriormente para treinamento / validação foi usado 70% / 30%.
+
 Executando o classificador obtemos as seguintes visualizações, respectivamente, da Curva ROC, a evolução da métrica F-Score e da Acurácia de acordo com o Threshold.
 
 
@@ -192,7 +202,7 @@ $~$
 
 **c)** Melhor valor do threshold e matriz de confusão dos resultados.
 
-Abaixo será aplicado o melhor de threshold encontrado e observado na tabela acima.
+Abaixo será aplicado o melhor de threshold encontrado e observado na tabela acima. 
 
     Melhor threshold encontrado usando os experimentos acima: 0.55
     
@@ -368,9 +378,13 @@ Abaixo são apresentadas as métricas e a matriz de confusão para esse melhor v
 ![png](EFC02_files/EFC02_48_1.png)
 
 
-Por fim, após a execução do método KNN, é possível dizer que mesmo um método não-paramétrico é capaz de atingir resultados relativamente ótimos. Claro que nessa avaliação é importante salientar que os dados e consequentemente a relação entre cada uma das features permitem um excelente desempenho.
+Como resultado dos exercícios, podemos perceber que para o problema apresentado (identificação de atividade humana usando dados de smartphones), a técnica de classificação Regressão Logística apresentou um desempenho levemente acima da técnica KNN.
 
-Dessa maneira, quando da escolha do melhor modelo ou método, para a abordagem de determinado problema, faz-se importante a avaliação de diversos, entendendo claro a peculiaridade de cada um e dos dados que se tem a disposição.
+O critério de similaridade é um aspecto que possui grande influência no desempenho do método KNN. Acreditamos que devido ao fato do dataset apresentar muitas variáveis (features), o cálculo de similaridade entre os elementos sofreu uma leve desvantagem em relação ao método probabilístico da Regressão Logística.
+
+Não utilizamos neste exercício a métrica de confiança, ou seja, o quão certo o classificador acredita estar ao realizar uma classificação porque ao contrário do método de Regressão Logística (que mostra o nível de confiança), o método KNN só apresenta apenas os rótudos de classificação.
+
+Talvez a aplicação de outras técnicas de distância (além da euclidiana) ou alguma variação do próprio algorítmo de KNN podem trazer resultados mais próximos dos encontrados pela ténica Regressão Logística.
 
 $~$
 
