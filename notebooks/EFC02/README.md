@@ -116,7 +116,7 @@ onde $\mu$ é a média e $\sigma$ a variância de cada coluna.
 
 Através da matriz de correlação, podemos ter uma ideia de como as features de nosso dataset estão correlacionadas entre si.
 
-Destacam-se a correlação NEGATIVA forte entre os campos meanfun e o label, ou seja, quando um atributo cresce, o outro decresce.
+Destacam-se a correlação negativa forte entre os campos meanfun e o label, ou seja, quando um atributo cresce, o outro decresce.
 
 Evitando, encontrar apenas correlações lineares entres os valores, aplica-se também a Correlação em Distância, a qual possibilita visualizar valores de correlação não lineares entre variáveis e também avaliar a indepedência das variáveis (quando o valor for zero).
 
@@ -144,7 +144,7 @@ Abaixo alguns gráficos o quais apresentam a distribuição de algumas das corre
 ![png](EFC02_files/EFC02_16_0.png)
 
 
-De acordo com a análise estatística apresentada acima, podemos usar apenas os seguintes campos do dataset para conseguir uma acurácia em torno de 96% (*sd, median, sp.ent, sfm, centroid, meanfun, meandom*).
+De acordo com a análise estatística apresentada acima, podemos usar apenas alguns campos do dataset para conseguir relativamente uma boa acurácia.
 
 Outros campos analisados como *skew* e *kurt*, tem baixa correlação com o label final e o campo *mode* tem uma forte correlação com todos os outros campos mas também relativamente baixa com o label.
 
@@ -194,7 +194,7 @@ Executando o classificador obtemos as seguintes visualizações, respectivamente
 
 
 A curva ROC apresenta a qualidade do classificador e a evolução da F-medida permite encontrar um melhor threshold para os dados.
-Entretanto tal alternativa é realmente válida para classificação binária, visto que principalmente a curva ROC e o threshold são escolhas realizadas entre até 2 elementos.
+Entretanto tal alternativa é realmente válida para classificação binária, visto que principalmente a curva ROC e a F-medida são escolhas realizadas entre até 2 elementos.
 
 Talvez uma alternativa para multi-classes, seria algo como gerar a curva ROC e o threshold para uma estrutura um-contra-todos, por exemplo.
 
