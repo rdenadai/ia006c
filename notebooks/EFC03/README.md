@@ -44,7 +44,12 @@ $\frac{\partial outZ}{\partial inpZ} = f(.)$
 
 $\frac{\partial inpZ}{\partial v_12} = x_1$
 
+
+$~$
+
 Finalmente:
+
+$~$
 
 $\frac{\partial J}{\partial v_{12}} = ((\hat y_1 - y_1)w_{30} + (\hat y_2 - y_2)w_{31}) \times f(.) \times x_1$
 
@@ -426,7 +431,12 @@ Faz-se uso do framework Keras.
 
 Portanto, como demonstrado acima, uma quantidade de apenas 30 unidades (neurônios) já é capaz de resolver o problema com acurácia de >= 87%.
 
+$~$
+
 #### **Support Vector Machine (SVM)**
+
+$~$
+$~$
 
 Para o caso do SVM, foi utilizado o kernel **rbf (Radial Basis Function)** o qual pode ser considerado uma aproximação de uma Rede Neural. Isso fica nítido no resultado apresentado.
 
@@ -471,11 +481,11 @@ P.S.: Não foi alterado o parâmetro *gamma*.
 
 
 
-![png](EFC03_files/EFC03_51_2.png)
+![png](EFC03_files/EFC03_50_2.png)
 
 
 
-![png](EFC03_files/EFC03_52_0.png)
+![png](EFC03_files/EFC03_51_0.png)
 
 
 Conforme mencionado o kernel *rbf* com *C=5* trouxe uma acurácia próxima (se não, identica ao que uma MLP conseguiu).
@@ -521,11 +531,11 @@ Abaixo, apresenta-se os resultados.
 
 
 
-![png](EFC03_files/EFC03_55_2.png)
+![png](EFC03_files/EFC03_54_2.png)
 
 
 
-![png](EFC03_files/EFC03_56_0.png)
+![png](EFC03_files/EFC03_55_0.png)
 
 
 Adicionar mais graus ao kernel polinomial, não necessariamente aumenta a acurácia do modelo. Isso pode ser observado abaixo.
@@ -565,24 +575,27 @@ Foi utilizado o mesmo modelo SVM, com a execeção do uso de um polinômio de gr
 
 
 
-![png](EFC03_files/EFC03_59_2.png)
+![png](EFC03_files/EFC03_58_2.png)
 
 
 
-![png](EFC03_files/EFC03_60_0.png)
-
+![png](EFC03_files/EFC03_59_0.png)
 
 
 $~$
-#### **Considerações gerais**
+
+### **Considerações gerais**
+
+
 Percebemos que para o problema proposto, ambos algoritmos tiveram desempenho próximo (em torno de 87~88% de acurácia). A única diferença expressiva que percebemos foi a vantagem no tempo de treinamento do algoritmo SVM em relação a rede MLP.
 
 Especificadamente falando da rede MLP, ficou claro que o aumento no número de camadas e o aumento no número de neurônios das camadas internas não reflete necessariamente na melhoria do resultado final. A rede possui um valor otimizado de neurônios e camadas internas para um determinado problema (no caso apresentado 1 camada com 30 neurônios) e quaisquer valores acima do ótimo representam inserção de ruído e desperdício computacional. Percebemos que a definição de outros hiperparâmetros (como otimizadores) são bem vindos pois colaboram para outros ganhos além da acurácia final, como por exemplo um tempo menor de convergência.
 
 Em relação ao modelo SVM vimos que utilizar o truque do kernel de fato viabiliza o modelo para problemas não lineares, onde os resultados encontrados se assemelham muito com os da rede neural. Assim como na questão da rede neural, o algoritmo também apresenta valores otimizados para o problema proposto e o aumento destes hiperparametros de kernel e regularização além do ótimo não representa melhoria de desempenho.
 
+$~$
 
-#### **NOTAS**
+### **NOTAS**
 
  - Uma maneira utilizada para encontrar alguns dos hiperparâmetros utilizados foi executar uma busca exaustiva avaliando diferentes valores. No caso específico a biblioteca scikit-learn possui o método [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html), o qual tem a seguinte explicação: ***Exhaustive search over specified parameter values for an estimator.***
 
@@ -593,7 +606,7 @@ Em relação ao modelo SVM vimos que utilizar o truque do kernel de fato viabili
  - A escolha pelo parâmetro de *batch_size=32* vem de um paper indicado pelo **Yann LeCun** ([Friends dont let friends use minibatches larger than 32](https://twitter.com/ylecun/status/989610208497360896)). Entretanto é discutido em outro paper que o decay do batch_size (de algo grande para cada vez menor) pode também ajudar em uma melhor convergência.
 
 $~$
-
+$~$
 
 Anthony Miranda Vieira - 229058
 
