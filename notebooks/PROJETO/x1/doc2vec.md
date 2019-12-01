@@ -1,3 +1,4 @@
+
 ### Carregamento dos datasets
 
 Os datasets de exemplos são frases já pré-categorizadas usadas em chatbots.
@@ -211,7 +212,7 @@ Parâmetros iniciais... quantidade de dimensões dos vetores gerados para cada f
 
 A quantidade de épocas de inferência, sugere-se ser bem superior as de treinamento.
 
-    Dimensions   : 500
+    Dimensions   : 1000
     Epochs       : 200
     Infer Epochs : 15000
 
@@ -224,13 +225,26 @@ A quantidade de épocas de inferência, sugere-se ser bem superior as de treinam
 
 Validação do modelo gerado pelo Doc2Vec... teste tanto nos dados apresentados para treinamento quanto nos dados de testes e as acurácias alcançadas.
 
+### Acurácia distância cossenoidal
+
     - Acurácia treino: 99.0
      - Acurácia teste 1  : 81.82
-     - Acurácia teste 2  : 81.82
-     - Acurácia teste 3  : 81.82
-     - Acurácia teste 4  : 81.82
-     - Acurácia teste 5  : 81.82
-    - Acurácia média teste: 81.82
+     - Acurácia teste 2  : 80.0
+     - Acurácia teste 3  : 80.0
+     - Acurácia teste 4  : 80.0
+     - Acurácia teste 5  : 80.0
+    - Acurácia média teste: 80.36
+
+
+### Acurácia distância euclidiana
+
+    - Acurácia treino: 97.0
+     - Acurácia teste 1  : 74.55
+     - Acurácia teste 2  : 74.55
+     - Acurácia teste 3  : 72.73
+     - Acurácia teste 4  : 74.55
+     - Acurácia teste 5  : 74.55
+    - Acurácia média teste: 74.18
 
 
 ### Clusterização
@@ -250,119 +264,115 @@ Utilizou-se o KMeans definindo a quantidade de clusters para o número ideal de 
   </thead>
   <tbody>
     <tr>
-      <td>vc tem nome?</td>
+      <td>poxa, obrigado, me ajudou muito</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>estou falando com um chatbot com certeza</td>
+      <td>Preciso de outro tipo de ajuda</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>estou falando com um bot não?</td>
+      <td>muitíssimo obrigado</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>eu consigo trocar meu username para outro?</td>
+      <td>não preciso mais de ajuda, estou satisfeito</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>não obrigado, isso é tudo</td>
+      <td>nao preciso de mais nada, obrigado</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>é possível alterar meu username?</td>
+      <td>preciso de ajuda de verdade</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>posso consultar informações relativas a outros serviços e projetos?</td>
+      <td>acesso remoto à rede de dados da empresa</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>quais serviços eu posso consultar com você?</td>
+      <td>como faco para acessar a rede sem fio de fora da empresa?</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>quais serviços estão disponíveis?</td>
+      <td>quero configurar a rede sem fio no meu celular</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>como utilizar a rede sem fio (wifi)</td>
+      <td>existem outros serviços que posso consultar com você?</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>queria configurar rede sem fio</td>
+      <td>você tem nome?</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>como acesso a rede sem fio no meu departamento</td>
+      <td>qual o nome que atribuiram a você?</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>como você se chama?</td>
+      <td>como faco para trocar o meu usuario</td>
       <td>4</td>
-    </tr>
-    <tr>
-      <td>é para colocar minha senha do meu departamento ou outra?</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>existe alguma maneira de alterar meu nome de usuário?</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>quero criar uma conta de usuário para um colaborador externo, como fazer?</td>
-      <td>5</td>
     </tr>
     <tr>
       <td>colaboradores externos conseguem ter uma conta de usuário?</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>minha conta de email foi desativada</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>você não parece ser um ser humano</td>
       <td>5</td>
     </tr>
     <tr>
-      <td>Eu preciso criar um email institucional</td>
+      <td>Você é um bot?</td>
       <td>5</td>
     </tr>
     <tr>
-      <td>quais outras opções você pode me atender?</td>
+      <td>você é um chatbot?</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>existem outras opções de serviços prestados?</td>
       <td>6</td>
     </tr>
     <tr>
-      <td>quais outras opções tem para me mostrar?</td>
+      <td>vc tem nome?</td>
       <td>6</td>
     </tr>
     <tr>
-      <td>nenhuma dessas opções me interessa</td>
+      <td>quais outras informações sobre serviços prestados você oferece?</td>
       <td>6</td>
     </tr>
     <tr>
-      <td>ok, agora consegui, obrigado</td>
+      <td>obrigado pela ajuda, deu certo</td>
       <td>7</td>
     </tr>
     <tr>
-      <td>Como acesso meu email</td>
+      <td>qual o nome que lhe foi dado?</td>
       <td>7</td>
     </tr>
     <tr>
-      <td>inseri o email e senha e não deu certo</td>
+      <td>ainda estou com problemas, você não me ajudou</td>
       <td>7</td>
     </tr>
     <tr>
-      <td>como solicitar um novo certificado digital para um sistema que criei no me departamento?</td>
+      <td>meu novo username não esta sendo criado</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>como faço para criar um novo certificado digital?</td>
+      <td>consigo criar um endereço eletrônico de email institucional?</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>Revogação de certificado digital</td>
+      <td>consigo alterar meu username para um novo?</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>quero mais informações sobre certificados digitais</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>minha empresa pode emitir certificados digitais para mim?</td>
+      <td>posso ver outras opções de serviços?</td>
       <td>9</td>
     </tr>
     <tr>
@@ -370,27 +380,31 @@ Utilizou-se o KMeans definindo a quantidade de clusters para o número ideal de 
       <td>9</td>
     </tr>
     <tr>
-      <td>configurar outlook</td>
+      <td>voce nao sabe nada sobre vpn?</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>estou com problemas para acessar meu email</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>quero acessar a rede da empresa da minha casa</td>
+      <td>não estou tendo sucesso ao tentar acessar meu email</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>quero acessar remotamente a rede interna da minha empresa diretamente de minha casa</td>
+      <td>meu email esta sem acesso, não estou conseguindo acessar</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>não preciso mais de ajuda, estou satisfeito</td>
+      <td>como solicitar a emissão de certificados digitais?</td>
       <td>11</td>
     </tr>
     <tr>
-      <td>você tem outras opções para ajudar?</td>
+      <td>como emitir novos certificados digitais?</td>
       <td>11</td>
     </tr>
     <tr>
-      <td>Preciso que um humano me ajude</td>
+      <td>Revogação de certificado digital</td>
       <td>11</td>
     </tr>
   </tbody>
@@ -406,51 +420,51 @@ Utilizou-se o KMeans definindo a quantidade de clusters para o número ideal de 
   <tbody>
     <tr>
       <td>C0</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <td>C1</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>C2</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>C3</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>C4</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <td>C5</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>C6</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>C7</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>C8</td>
       <td>10</td>
     </tr>
     <tr>
+      <td>C1</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>C2</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>C3</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>C4</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>C5</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>C6</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>C7</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>C8</td>
+      <td>17</td>
+    </tr>
+    <tr>
       <td>C9</td>
-      <td>6</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>C10</td>
-      <td>16</td>
+      <td>38</td>
     </tr>
     <tr>
       <td>C11</td>
-      <td>23</td>
+      <td>15</td>
     </tr>
   </tbody>
 </table>
@@ -461,7 +475,7 @@ Utilizou-se o KMeans definindo a quantidade de clusters para o número ideal de 
 Apresentação dos protótipos gerados pelo KMeans, reduzindo a dimensão usando o algoritmo MDS (Multidimensional Scaling).
 
 
-![png](doc2vec_files/doc2vec_19_0.png)
+![png](doc2vec_files/doc2vec_22_0.png)
 
 
 ### Clusterização dos dados de Teste
@@ -469,36 +483,36 @@ Apresentação dos protótipos gerados pelo KMeans, reduzindo a dimensão usando
 Por fim, realizada a clusterização dos dados de teste e a apresentação das 8 primeiras frases do conjunto de teste juntamente com outras duas frases do cluster ao qual foi identificado como o melhor.
 
     * Meu email está com problema
-      -  inseri o email e senha e não deu certo
-      -  Como acesso meu email
+      -  meu email esta sem acesso, não estou conseguindo acessar
+      -  não estou tendo sucesso ao tentar acessar meu email
     --------------------
     * existem mais serviços com os quais eu posso consultar?
-      -  quais serviços estão disponíveis?
-      -  posso consultar informações relativas a outros serviços e projetos?
+      -  você tem nome?
+      -  existem outros serviços que posso consultar com você?
     --------------------
     * como eu faco para criar um novo usuario?
+      -  minha conta de email foi desativada
       -  colaboradores externos conseguem ter uma conta de usuário?
-      -  quero criar uma conta de usuário para um colaborador externo, como fazer?
     --------------------
     * como me conectar ao wifi (rede sem fio) da empresa
-      -  como acesso a rede sem fio no meu departamento
-      -  como utilizar a rede sem fio (wifi)
+      -  acesso remoto à rede de dados da empresa
+      -  como faco para acessar a rede sem fio de fora da empresa?
     --------------------
     * eu consigo alterar meu nome de usuário para outro?
-      -  não obrigado, isso é tudo
-      -  eu consigo trocar meu username para outro?
+      -  minha conta de email foi desativada
+      -  como faco para trocar o meu usuario
     --------------------
     * qual usuario e senha usar para acessar os sistemas?
-      -  existe alguma maneira de alterar meu nome de usuário?
-      -  é para colocar minha senha do meu departamento ou outra?
+      -  não estou tendo sucesso ao tentar acessar meu email
+      -  meu email esta sem acesso, não estou conseguindo acessar
     --------------------
     * Não consigo entrar no meu email
-      -  Como acesso meu email
-      -  inseri o email e senha e não deu certo
+      -  não estou tendo sucesso ao tentar acessar meu email
+      -  estou com problemas para acessar meu email
     --------------------
     * tem como renovar um certificado digital emitido?
+      -  como emitir novos certificados digitais?
       -  Revogação de certificado digital
-      -  como faço para criar um novo certificado digital?
     --------------------
 
 
@@ -506,16 +520,16 @@ Por fim, realizada a clusterização dos dados de teste e a apresentação das 8
 
 Abaixo são apresentadas métricas para demonstrar o quanto a clusterização parece funcionar.
 
-    Homogeneidade    :  0.821
-    Completude       :  0.837
-    V-Measure        :  0.829
-    Silhouette       :  0.158
+    Homogeneidade    :  0.744
+    Completude       :  0.777
+    V-Measure        :  0.76
+    Silhouette       :  0.117
 
 
 Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização (conforme apresentado acima) entretanto variando a quantidade do número de clusters para verificar como as métricas se comportam.
 
 
-![png](doc2vec_files/doc2vec_26_0.png)
+![png](doc2vec_files/doc2vec_29_0.png)
 
 
 ### HDBSCAN no espaço dos dados
@@ -533,23 +547,19 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   </thead>
   <tbody>
     <tr>
-      <td>certificados digitais</td>
+      <td>como acesso a rede sem fio no meu departamento</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>posso fazer a configuracao em meu so sem usar a informacao de certificado digital disponibilizada?</td>
+      <td>como eu faco para configurar a rede sem fio (wifi)?</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>quero mais informações sobre certificados digitais</td>
+      <td>como conectar a rede wifi do meu departamento?</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>how to configure vpn?</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>quero instalar a vpn</td>
+      <td>Como eu configuro meu email no thunderbird</td>
       <td>1</td>
     </tr>
     <tr>
@@ -557,196 +567,176 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
       <td>1</td>
     </tr>
     <tr>
-      <td>preciso mesmo usar o certificado para configurar minha rede sem fio?</td>
+      <td>como configurar a vpn</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>como solicitar um novo certificado digital para um sistema que criei no me departamento?</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>quero configurar a rede sem fio no meu celular</td>
+      <td>como saber mais sobre o email da empresa</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>como eu configuro a rede sem fio no meu computador?</td>
+      <td>onde consigo mais informações sobre a emição / manutenção de certificados digitais emitidos pela empresa?</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>como acessar os sistemas da empresa de casa</td>
+      <td>qual o nome que atribuiram a você?</td>
       <td>3</td>
-    </tr>
-    <tr>
-      <td>como eu acesso a rede interna da minha empresa estando em outro pais?</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>como eu faco para acessar a rede da empresa estando eu em outro pais</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>quero me conectar a rede sem fio</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>preciso conectar me a internet através da rede sem fio (wifi)</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>como acesso a rede sem fio no meu departamento</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>vc tem nome?</td>
-      <td>5</td>
     </tr>
     <tr>
       <td>você tem um nome?</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>vc tem nome?</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>quais outras opções você pode me atender?</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>estou tentando acesso ao meu email mas não estou conseguindo</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>queria saber qual senha devo usar para acessar o email</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Usuário / Matrícula já cadastrado com o username</td>
       <td>5</td>
-    </tr>
-    <tr>
-      <td>seu nome qual é mesmo?</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>não estou tendo sucesso ao tentar acessar meu email</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>meu usuário e senha não estão funcionando</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>meu email foi bloqueado</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>não estou conseguindo criar um novo nome de usuário</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>estou tentanto criar meu username, mas não estou conseguindo</td>
-      <td>7</td>
     </tr>
     <tr>
       <td>Username já cadastrado</td>
-      <td>7</td>
+      <td>5</td>
     </tr>
     <tr>
-      <td>tem como trocar o meu username?</td>
-      <td>8</td>
+      <td>meu novo username não esta sendo criado</td>
+      <td>5</td>
     </tr>
     <tr>
-      <td>é possível trocar o meu username?</td>
-      <td>8</td>
+      <td>eu consigo trocar meu username para outro?</td>
+      <td>6</td>
     </tr>
     <tr>
       <td>é possível alterar meu username?</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>é possível trocar o meu username?</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>você ajudou muito</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>poxa, obrigado, me ajudou muito</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>muitíssimo obrigado</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Como redirecionar meus emails para outro endereço</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>qual o nome que lhe foi dado?</td>
-      <td>9</td>
+      <td>como eu faço para encaminhar meus emails para outro conta?</td>
+      <td>8</td>
     </tr>
     <tr>
-      <td>Como faço para recuperar meus emails?</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>você ajudou muito, obrigadão</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>é permitido que patrulheiros tenham uma conta?</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>Como posso criar uma conta para Colaborador Externo?</td>
-      <td>10</td>
+      <td>posso acessar meu endereço eletrônico via thunderbird ou outlook?</td>
+      <td>8</td>
     </tr>
     <tr>
       <td>tem como eu mudar meu nome de usuário?</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>É possível criar um conta para colaborador externo?</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>quero criar uma conta de usuário para os meus patrulheiros</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>como eu altero, ou troco, minha senha</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>estou sem acesso ao meu endereco eletronico</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Como encaminhar meus emails para outro endereço</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>como eu faço para encaminhar meus emails para outro conta?</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Não consigo recuperar a minha senha</td>
-      <td>12</td>
-    </tr>
-    <tr>
       <td>como alterar minha senha do usuário?</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Minha Senha está com problema</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>você não parece ser um ser humano</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>quero falar com um atendente, não com um chatbot</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>tenho certeza que você é um bot</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>preciso de ajuda de verdade</td>
       <td>12</td>
     </tr>
     <tr>
-      <td>Esqueci a minha senha</td>
+      <td>não preciso mais de ajuda, estou satisfeito</td>
       <td>12</td>
     </tr>
     <tr>
-      <td>Posso falar com um humano?</td>
+      <td>nao preciso mais de ajuda</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>nenhuma dessas opções me ajuda</td>
       <td>13</td>
     </tr>
     <tr>
-      <td>Quero falar com um humano</td>
+      <td>você tem outras opções para ajudar?</td>
       <td>13</td>
-    </tr>
-    <tr>
-      <td>poxa, não queria falar com um chatbot... queria um humano de verdade.</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>nao preciso de mais nada, obrigado</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>preciso de ajudar</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>Preciso que um humano me ajude</td>
-      <td>14</td>
     </tr>
     <tr>
       <td>não tem outras opções para me mostrar?</td>
-      <td>15</td>
+      <td>13</td>
     </tr>
     <tr>
-      <td>essas opções não me ajudam</td>
-      <td>15</td>
+      <td>nenhuma dessas opções me interessa</td>
+      <td>14</td>
     </tr>
     <tr>
-      <td>essas opções não tem o que estou procurando</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>acho que por enquanto e só isso mesmo, obrigado</td>
-      <td>16</td>
+      <td>quais as opções de serviços oferecidos mesmo?</td>
+      <td>14</td>
     </tr>
     <tr>
       <td>posso ver outras opções de serviços?</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>acho que nenhuma opção padrão me interessa</td>
-      <td>16</td>
+      <td>14</td>
     </tr>
     <tr>
       <td>quais serviços eu posso consultar com você?</td>
-      <td>17</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>posso consultar informações relativas a outros serviços e projetos?</td>
+      <td>15</td>
     </tr>
     <tr>
       <td>você tem outros serviços?</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <td>existem outros serviços que posso consultar com você?</td>
-      <td>17</td>
+      <td>15</td>
     </tr>
   </tbody>
 </table>
@@ -761,7 +751,7 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   <tbody>
     <tr>
       <td>C0</td>
-      <td>15</td>
+      <td>27</td>
     </tr>
     <tr>
       <td>C1</td>
@@ -769,23 +759,23 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
     </tr>
     <tr>
       <td>C2</td>
-      <td>5</td>
+      <td>15</td>
     </tr>
     <tr>
       <td>C3</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>C4</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>C5</td>
       <td>7</td>
     </tr>
     <tr>
+      <td>C4</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>C5</td>
+      <td>6</td>
+    </tr>
+    <tr>
       <td>C6</td>
-      <td>20</td>
+      <td>5</td>
     </tr>
     <tr>
       <td>C7</td>
@@ -793,42 +783,34 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
     </tr>
     <tr>
       <td>C8</td>
-      <td>5</td>
+      <td>7</td>
     </tr>
     <tr>
       <td>C9</td>
-      <td>45</td>
+      <td>9</td>
     </tr>
     <tr>
       <td>C10</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>C11</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>C12</td>
       <td>13</td>
     </tr>
     <tr>
-      <td>C13</td>
+      <td>C11</td>
       <td>24</td>
     </tr>
     <tr>
-      <td>C14</td>
+      <td>C12</td>
       <td>7</td>
     </tr>
     <tr>
-      <td>C15</td>
+      <td>C13</td>
       <td>9</td>
     </tr>
     <tr>
-      <td>C16</td>
+      <td>C14</td>
       <td>6</td>
     </tr>
     <tr>
-      <td>C17</td>
+      <td>C15</td>
       <td>12</td>
     </tr>
   </tbody>
@@ -838,7 +820,7 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 ### Topologia dos dados de treinamento usando MDS
 
 
-![png](doc2vec_files/doc2vec_30_0.png)
+![png](doc2vec_files/doc2vec_33_0.png)
 
 
 ## **HDBSCAN**
@@ -852,7 +834,7 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 ## **t-SNE + HDBSCAN**
 
 
-![png](doc2vec_files/doc2vec_34_0.png)
+![png](doc2vec_files/doc2vec_37_0.png)
 
 
 
@@ -885,204 +867,204 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   </thead>
   <tbody>
     <tr>
-      <th>3</th>
-      <td>8</td>
-      <td>170</td>
-      <td>0.83</td>
-      <td>0.577</td>
-      <td>0.331</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>13</td>
-      <td>220</td>
-      <td>0.89</td>
-      <td>0.577</td>
-      <td>0.328</td>
-    </tr>
-    <tr>
       <th>0</th>
       <td>5</td>
-      <td>152</td>
+      <td>187</td>
+      <td>0.80</td>
+      <td>0.540</td>
+      <td>0.336</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>11</td>
+      <td>184</td>
+      <td>0.86</td>
+      <td>0.512</td>
+      <td>0.320</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10</td>
+      <td>213</td>
       <td>0.89</td>
-      <td>0.472</td>
+      <td>0.546</td>
       <td>0.261</td>
     </tr>
     <tr>
       <th>4</th>
       <td>9</td>
-      <td>172</td>
-      <td>0.83</td>
-      <td>0.502</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>18</td>
-      <td>170</td>
-      <td>0.83</td>
-      <td>0.496</td>
-      <td>0.249</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>11</td>
-      <td>155</td>
-      <td>0.77</td>
-      <td>0.454</td>
-      <td>0.238</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>6</td>
-      <td>131</td>
-      <td>0.67</td>
-      <td>0.564</td>
-      <td>0.235</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>12</td>
-      <td>164</td>
-      <td>0.89</td>
-      <td>0.508</td>
+      <td>152</td>
+      <td>0.86</td>
+      <td>0.590</td>
       <td>0.234</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>15</td>
-      <td>152</td>
+      <th>15</th>
+      <td>20</td>
+      <td>213</td>
       <td>0.89</td>
-      <td>0.508</td>
-      <td>0.213</td>
+      <td>0.453</td>
+      <td>0.209</td>
     </tr>
     <tr>
       <th>9</th>
       <td>14</td>
-      <td>187</td>
-      <td>0.70</td>
-      <td>0.455</td>
-      <td>0.195</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>27</td>
-      <td>202</td>
-      <td>0.89</td>
-      <td>0.398</td>
-      <td>0.165</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7</td>
-      <td>202</td>
-      <td>0.89</td>
-      <td>0.512</td>
-      <td>0.160</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>10</td>
-      <td>169</td>
-      <td>0.78</td>
-      <td>0.480</td>
-      <td>0.142</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>56</td>
-      <td>135</td>
-      <td>0.90</td>
-      <td>0.300</td>
-      <td>0.136</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>19</td>
-      <td>172</td>
-      <td>0.83</td>
-      <td>0.444</td>
-      <td>0.132</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>31</td>
-      <td>155</td>
+      <td>151</td>
       <td>0.77</td>
-      <td>0.397</td>
-      <td>0.132</td>
+      <td>0.506</td>
+      <td>0.208</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>16</td>
-      <td>131</td>
-      <td>0.67</td>
-      <td>0.473</td>
-      <td>0.126</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>49</td>
-      <td>203</td>
-      <td>0.87</td>
-      <td>0.306</td>
-      <td>0.117</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>36</td>
-      <td>131</td>
-      <td>0.67</td>
-      <td>0.376</td>
-      <td>0.116</td>
+      <th>27</th>
+      <td>32</td>
+      <td>110</td>
+      <td>0.74</td>
+      <td>0.419</td>
+      <td>0.197</td>
     </tr>
     <tr>
       <th>12</th>
       <td>17</td>
-      <td>202</td>
-      <td>0.89</td>
-      <td>0.466</td>
-      <td>0.092</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>42</td>
-      <td>164</td>
-      <td>0.89</td>
-      <td>0.374</td>
-      <td>0.088</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>58</td>
-      <td>131</td>
+      <td>171</td>
       <td>0.82</td>
-      <td>0.276</td>
-      <td>0.084</td>
+      <td>0.482</td>
+      <td>0.196</td>
     </tr>
     <tr>
-      <th>39</th>
-      <td>44</td>
+      <th>13</th>
+      <td>18</td>
+      <td>97</td>
+      <td>0.76</td>
+      <td>0.467</td>
+      <td>0.195</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>15</td>
       <td>187</td>
-      <td>0.70</td>
-      <td>0.323</td>
-      <td>0.076</td>
+      <td>0.80</td>
+      <td>0.490</td>
+      <td>0.184</td>
     </tr>
     <tr>
-      <th>38</th>
-      <td>43</td>
-      <td>220</td>
-      <td>0.89</td>
-      <td>0.322</td>
-      <td>0.073</td>
+      <th>29</th>
+      <td>34</td>
+      <td>151</td>
+      <td>0.77</td>
+      <td>0.345</td>
+      <td>0.182</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>35</td>
+      <td>187</td>
+      <td>0.80</td>
+      <td>0.411</td>
+      <td>0.179</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7</td>
+      <td>171</td>
+      <td>0.82</td>
+      <td>0.474</td>
+      <td>0.149</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>12</td>
+      <td>110</td>
+      <td>0.74</td>
+      <td>0.466</td>
+      <td>0.138</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>48</td>
+      <td>127</td>
+      <td>0.85</td>
+      <td>0.334</td>
+      <td>0.127</td>
     </tr>
     <tr>
       <th>17</th>
       <td>22</td>
-      <td>164</td>
-      <td>0.89</td>
-      <td>0.423</td>
-      <td>0.064</td>
+      <td>110</td>
+      <td>0.74</td>
+      <td>0.452</td>
+      <td>0.124</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>23</td>
+      <td>150</td>
+      <td>0.87</td>
+      <td>0.460</td>
+      <td>0.123</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>137</td>
+      <td>0.82</td>
+      <td>0.455</td>
+      <td>0.119</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>25</td>
+      <td>187</td>
+      <td>0.80</td>
+      <td>0.407</td>
+      <td>0.115</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>57</td>
+      <td>125</td>
+      <td>0.86</td>
+      <td>0.311</td>
+      <td>0.113</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>13</td>
+      <td>150</td>
+      <td>0.87</td>
+      <td>0.503</td>
+      <td>0.110</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>21</td>
+      <td>184</td>
+      <td>0.86</td>
+      <td>0.424</td>
+      <td>0.105</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>38</td>
+      <td>97</td>
+      <td>0.76</td>
+      <td>0.411</td>
+      <td>0.093</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>33</td>
+      <td>150</td>
+      <td>0.87</td>
+      <td>0.412</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>31</td>
+      <td>184</td>
+      <td>0.86</td>
+      <td>0.376</td>
+      <td>0.079</td>
     </tr>
   </tbody>
 </table>
@@ -1090,14 +1072,14 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 
 
 
-    Homogeneidade    :  0.605
-    Completude       :  0.551
-    V-Measure        :  0.577
-    Silhouette       :  0.331
+    Homogeneidade    :  0.574
+    Completude       :  0.511
+    V-Measure        :  0.54
+    Silhouette       :  0.336
 
 
 
-![png](doc2vec_files/doc2vec_36_1.png)
+![png](doc2vec_files/doc2vec_39_1.png)
 
 
     Frases por cluster:
@@ -1113,220 +1095,244 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   </thead>
   <tbody>
     <tr>
-      <td>você tem nome?</td>
+      <td>qual o nome que atribuiram a você?</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>a senha esta inválida ou incorreta</td>
+      <td>Não consigo restaurar a minha senha</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <td>como e o seu nome?</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>estou falando com um chatbot com certeza</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>voce nao resolveu meu problema, quero falar com um atendente humano</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>ainda estou com dificuldades, um bot não pode resolver meu problema</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>Preciso de outro tipo de ajuda</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>voce nao conseguiu me entender preciso de ajuda de verdade</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>voce nao conseguiu me ajudar, quero falar com um atendente</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>como acessar wifi da empresa?</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>qual o usuario para acessar os sistemas da minha empresa</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>como acessar os sistemas da empresa de casa</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>configurar outlook</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>configurar vpn (acesso remoto) em aparelhos da nokia</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>quais serviços eu posso consultar com você?</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>que serviços estão disponíveis?</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>você pode me responder sobre quais serviços disponíveis?</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>quais outras informações sobre serviços prestados você oferece?</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>nenhuma dessas opções me interessa</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>acho que nenhuma opção padrão me interessa</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>quais outros servicos voce oferece?</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>preciso conectar me a internet através da rede sem fio (wifi)</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>como acesso a rede sem fio no meu departamento</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>como faco para acessar a rede sem fio de fora da empresa?</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>como eu faco para acessar a rede da empresa estando eu em outro pais</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>queria conectar a rede sem fio da empresa, como proceder?</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>queria saber qual usuario e senha usar para me conectar no wifi</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>essas opções não me ajudam</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>essas opções não tem o que estou procurando</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>você tem outras opções para ajudar?</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>consigo alterar meu username para um novo?</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>estou tentanto criar meu username, mas não estou conseguindo</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>Usuário / Matrícula já cadastrado com o username</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>obrigado pela ajuda, deu certo</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>quero mais informacoes sobre senhas e como proceder</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>inseri o email e senha e não deu certo</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>quero mais informações sobre certificados digitais</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>minha empresa pode emitir certificados digitais para mim?</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>certificados digitais</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>como solicitar um novo certificado digital para um sistema que criei no me departamento?</td>
-      <td>13</td>
     </tr>
     <tr>
       <td>nenhuma das opções mais solicitadas me ajuda</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>posso ver outras opções de serviços?</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>que serviços estão disponíveis?</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>quais serviços estão disponíveis?</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>quais outros servicos voce oferece?</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>quem e voce?</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>existem outros serviços que posso consultar com você?</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>quero acessar a rede da empresa da minha casa</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>quero acessar remotamente a rede interna da minha empresa diretamente de minha casa</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>queria acessar remotamente a rede interna da empresa estando em outro pais</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Eu não consigo acessar meu email</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>não estou conseguindo acessar meu email</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Preciso de outro tipo de ajuda</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>voce nao conseguiu me ajudar, quero falar com um humano</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>voce nao conseguiu me ajudar, quero falar com um atendente</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Você não conseguiu me ajudar</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>tenho certeza que você é um bot</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>estou falando com um bot não?</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>um chatbot nao conseguirá resolver meu problema</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Quero falar com um humano</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>poxa, não queria falar com um chatbot... queria um humano de verdade.</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>quero falar com um atendente, não com um chatbot</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>como solicitar um novo certificado digital para um sistema que criei no me departamento?</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Solicitação de certificado digital</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>posso fazer a configuracao em meu so sem usar a informacao de certificado digital disponibilizada?</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>como configurar a vpn</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>configurar outlook</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>how to configure vpn?</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>quero informações sobre email da minha empresa</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>é possível trocar o meu username?</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>tem como trocar o meu username?</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>minha empresa pode emitir certificados digitais para mim?</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>como emitir novos certificados digitais?</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>onde consigo mais informações sobre a emição / manutenção de certificados digitais emitidos pela empresa?</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>te chamo de quê?</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>como é que te chamam?</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>tem como eu mudar meu nome de usuário?</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>você tem outras opções para ajudar?</td>
       <td>13</td>
-    </tr>
-    <tr>
-      <td>como faço para criar um novo certificado digital?</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>existem outros programas para acessar meu email?</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>posso acessar meu endereço eletrônico via thunderbird ou outlook?</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>consigo recuperar emails perdidos?</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>como eu altero, ou troco, minha senha</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>estou com problemas de autenticacao</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>consigo criar um endereço eletrônico de email institucional?</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>como você se chama?</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>meu usuario esta cancelado</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>Como posso criar uma conta para Colaborador Externo?</td>
-      <td>16</td>
     </tr>
     <tr>
       <td>como eu faço para encaminhar meus emails para outro conta?</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>essas opções não me ajudam em nada</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>não tem outras opções para me mostrar?</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>Como posso criar uma conta para Colaborador Externo?</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>quero criar uma conta de usuário para os meus patrulheiros</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>e necessario instalar algum software adicional para conectar na rede sem fio?</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>para se conectar a rede sem fio, posso usar quais sistemas operacionais?</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>queria conectar a rede sem fio da empresa, como proceder?</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>queria configurar rede sem fio</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>meu novo username não esta sendo criado</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>eu odeio chatbots</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Minha Senha está com problema</td>
       <td>17</td>
     </tr>
     <tr>
-      <td>minha conta de email foi desativada</td>
+      <td>Como eu configuro meu email no thunderbird</td>
       <td>17</td>
     </tr>
     <tr>
-      <td>como faco para trocar o meu usuario</td>
+      <td>como eu altero, ou troco, minha senha</td>
       <td>17</td>
+    </tr>
+    <tr>
+      <td>preciso de ajudar</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>nao preciso mais de ajuda</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>inseri o email e senha e não funcionou</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Preciso que um humano me ajude</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>o email não esta no spam</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>preciso de ajuda de verdade</td>
+      <td>19</td>
     </tr>
   </tbody>
 </table>
@@ -1341,23 +1347,23 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   <tbody>
     <tr>
       <td>C0</td>
-      <td>39</td>
+      <td>53</td>
     </tr>
     <tr>
       <td>C1</td>
-      <td>18</td>
+      <td>7</td>
     </tr>
     <tr>
       <td>C2</td>
-      <td>15</td>
+      <td>13</td>
     </tr>
     <tr>
       <td>C3</td>
-      <td>5</td>
+      <td>14</td>
     </tr>
     <tr>
       <td>C4</td>
-      <td>19</td>
+      <td>6</td>
     </tr>
     <tr>
       <td>C5</td>
@@ -1365,23 +1371,23 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
     </tr>
     <tr>
       <td>C6</td>
-      <td>7</td>
+      <td>8</td>
     </tr>
     <tr>
       <td>C7</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>C8</td>
       <td>10</td>
     </tr>
     <tr>
+      <td>C8</td>
+      <td>7</td>
+    </tr>
+    <tr>
       <td>C9</td>
-      <td>6</td>
+      <td>5</td>
     </tr>
     <tr>
       <td>C10</td>
-      <td>12</td>
+      <td>7</td>
     </tr>
     <tr>
       <td>C11</td>
@@ -1389,27 +1395,35 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
     </tr>
     <tr>
       <td>C12</td>
-      <td>6</td>
+      <td>7</td>
     </tr>
     <tr>
       <td>C13</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>C14</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <td>C15</td>
       <td>9</td>
     </tr>
     <tr>
-      <td>C16</td>
+      <td>C14</td>
       <td>12</td>
     </tr>
     <tr>
+      <td>C15</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>C16</td>
+      <td>9</td>
+    </tr>
+    <tr>
       <td>C17</td>
-      <td>5</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>C18</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>C19</td>
+      <td>11</td>
     </tr>
   </tbody>
 </table>
@@ -1420,7 +1434,7 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 ## **Spectral Embedding + HDBSCAN**
 
 
-![png](doc2vec_files/doc2vec_40_0.png)
+![png](doc2vec_files/doc2vec_43_0.png)
 
 
 
@@ -1451,124 +1465,124 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   </thead>
   <tbody>
     <tr>
-      <th>8</th>
-      <td>0.69</td>
-      <td>0.586</td>
-      <td>0.417</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.69</td>
-      <td>0.586</td>
-      <td>0.417</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>0.67</td>
-      <td>0.611</td>
-      <td>0.401</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>0.49</td>
-      <td>0.588</td>
-      <td>0.370</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.78</td>
-      <td>0.564</td>
-      <td>0.357</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>0.21</td>
-      <td>0.552</td>
-      <td>0.350</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>0.79</td>
-      <td>0.564</td>
-      <td>0.326</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.81</td>
-      <td>0.582</td>
-      <td>0.319</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.82</td>
-      <td>0.600</td>
-      <td>0.313</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.83</td>
-      <td>0.602</td>
-      <td>0.312</td>
+      <th>18</th>
+      <td>0.76</td>
+      <td>0.573</td>
+      <td>0.438</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>0.64</td>
-      <td>0.594</td>
-      <td>0.304</td>
+      <td>0.45</td>
+      <td>0.577</td>
+      <td>0.437</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>0.84</td>
-      <td>0.588</td>
-      <td>0.283</td>
+      <th>6</th>
+      <td>0.90</td>
+      <td>0.645</td>
+      <td>0.419</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>0.22</td>
-      <td>0.568</td>
-      <td>0.282</td>
+      <th>14</th>
+      <td>0.68</td>
+      <td>0.607</td>
+      <td>0.407</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.54</td>
-      <td>0.545</td>
-      <td>0.271</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.34</td>
-      <td>0.470</td>
-      <td>0.265</td>
-    </tr>
-    <tr>
-      <th>13</th>
+      <th>15</th>
       <td>0.36</td>
-      <td>0.549</td>
-      <td>0.246</td>
+      <td>0.564</td>
+      <td>0.368</td>
     </tr>
     <tr>
-      <th>18</th>
-      <td>0.32</td>
-      <td>0.456</td>
-      <td>0.233</td>
+      <th>7</th>
+      <td>0.73</td>
+      <td>0.539</td>
+      <td>0.356</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.28</td>
-      <td>0.488</td>
-      <td>0.195</td>
+      <td>0.38</td>
+      <td>0.553</td>
+      <td>0.342</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>0.85</td>
-      <td>0.559</td>
-      <td>0.188</td>
+      <th>17</th>
+      <td>0.62</td>
+      <td>0.576</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.62</td>
+      <td>0.576</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.65</td>
+      <td>0.594</td>
+      <td>0.313</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.83</td>
+      <td>0.563</td>
+      <td>0.301</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.21</td>
+      <td>0.506</td>
+      <td>0.287</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.49</td>
+      <td>0.522</td>
+      <td>0.265</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.53</td>
+      <td>0.564</td>
+      <td>0.265</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.40</td>
-      <td>0.487</td>
-      <td>0.178</td>
+      <td>0.48</td>
+      <td>0.518</td>
+      <td>0.201</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.86</td>
+      <td>0.594</td>
+      <td>0.200</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.31</td>
+      <td>0.459</td>
+      <td>0.159</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.31</td>
+      <td>0.459</td>
+      <td>0.159</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.25</td>
+      <td>0.447</td>
+      <td>0.117</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.25</td>
+      <td>0.447</td>
+      <td>0.117</td>
     </tr>
   </tbody>
 </table>
@@ -1576,14 +1590,14 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 
 
 
-    Homogeneidade    :  0.598
-    Completude       :  0.575
-    V-Measure        :  0.586
-    Silhouette       :  0.417
+    Homogeneidade    :  0.603
+    Completude       :  0.546
+    V-Measure        :  0.573
+    Silhouette       :  0.438
 
 
 
-![png](doc2vec_files/doc2vec_42_1.png)
+![png](doc2vec_files/doc2vec_45_1.png)
 
 
 ---
@@ -1591,7 +1605,7 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 ## **MDS + HDBSCAN**
 
 
-![png](doc2vec_files/doc2vec_45_0.png)
+![png](doc2vec_files/doc2vec_48_0.png)
 
 
 
@@ -1623,179 +1637,179 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
   </thead>
   <tbody>
     <tr>
-      <th>41</th>
-      <td>4600</td>
+      <th>11</th>
+      <td>4876</td>
       <td>16</td>
-      <td>0.577</td>
-      <td>0.359</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
-      <th>0</th>
-      <td>500</td>
-      <td>15</td>
-      <td>0.579</td>
-      <td>0.336</td>
+      <th>23</th>
+      <td>2591</td>
+      <td>28</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>1500</td>
-      <td>15</td>
-      <td>0.579</td>
-      <td>0.336</td>
+      <th>18</th>
+      <td>4039</td>
+      <td>23</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
-      <th>30</th>
-      <td>3500</td>
-      <td>15</td>
-      <td>0.579</td>
-      <td>0.336</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2500</td>
-      <td>15</td>
-      <td>0.579</td>
-      <td>0.336</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>4400</td>
-      <td>31</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>4200</td>
-      <td>44</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>4100</td>
-      <td>43</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2400</td>
-      <td>31</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>3700</td>
-      <td>41</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>4500</td>
-      <td>39</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>4700</td>
-      <td>32</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>3400</td>
-      <td>31</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>3200</td>
-      <td>44</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>3100</td>
-      <td>43</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>3000</td>
-      <td>45</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>4000</td>
-      <td>45</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2700</td>
-      <td>41</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1000</td>
-      <td>45</td>
-      <td>0.540</td>
-      <td>0.261</td>
+      <th>14</th>
+      <td>4513</td>
+      <td>19</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>2000</td>
-      <td>45</td>
-      <td>0.540</td>
-      <td>0.261</td>
+      <td>3287</td>
+      <td>20</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>1400</td>
-      <td>31</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2200</td>
-      <td>44</td>
-      <td>0.540</td>
-      <td>0.261</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1100</td>
-      <td>43</td>
-      <td>0.540</td>
-      <td>0.261</td>
+      <th>20</th>
+      <td>1083</td>
+      <td>25</td>
+      <td>0.566</td>
+      <td>0.242</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1700</td>
-      <td>41</td>
-      <td>0.540</td>
-      <td>0.261</td>
+      <td>2938</td>
+      <td>17</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>2938</td>
+      <td>27</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2591</td>
+      <td>18</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>4513</td>
+      <td>29</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2397</td>
+      <td>24</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>4876</td>
+      <td>26</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2032</td>
+      <td>22</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3549</td>
+      <td>21</td>
+      <td>0.566</td>
+      <td>0.242</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4039</td>
+      <td>13</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4513</td>
+      <td>9</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4876</td>
+      <td>6</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>1083</td>
+      <td>5</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3549</td>
+      <td>11</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3287</td>
+      <td>10</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2591</td>
+      <td>8</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2397</td>
+      <td>14</td>
+      <td>0.525</td>
+      <td>0.153</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1200</td>
-      <td>44</td>
-      <td>0.540</td>
-      <td>0.261</td>
+      <td>2032</td>
+      <td>12</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1083</td>
+      <td>15</td>
+      <td>0.525</td>
+      <td>0.153</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2938</td>
+      <td>7</td>
+      <td>0.525</td>
+      <td>0.153</td>
     </tr>
   </tbody>
 </table>
@@ -1803,12 +1817,12 @@ Como exemplo de comparação, foi executado o mesmo algoritmo de clusterização
 
 
 
-    Homogeneidade    :  0.617
-    Completude       :  0.543
-    V-Measure        :  0.577
-    Silhouette       :  0.359
+    Homogeneidade    :  0.607
+    Completude       :  0.529
+    V-Measure        :  0.566
+    Silhouette       :  0.242
 
 
 
-![png](doc2vec_files/doc2vec_47_1.png)
+![png](doc2vec_files/doc2vec_50_1.png)
 
