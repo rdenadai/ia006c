@@ -4,5 +4,12 @@ matplotlib
 seaborn
 pandas
 scikit-learn
+nltk
+spacy
+gensim
+keras
+tensorflow
 ipython[all]
-
+pyclustering
+hdbscan
+wordcloud
